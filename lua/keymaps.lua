@@ -49,12 +49,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- LazyGit
-vim.keymap.set('n', '<M-S-g>', ':LazyGit<cr>', { silent = true, desc = 'Show lazygit' })
+vim.keymap.set('n', '<M-C-g>', ':LazyGit<cr>', { silent = true, desc = 'Show lazygit' })
 
 -- Search files
 vim.keymap.set('n', '<M-p>', ':Telescope find_files<cr>', { desc = 'Alias for [S]earch [F]iles' })
 
--- Document symbols
-vim.keymap.set('n', '<M-S-o>', ':Telescope lsp_document_symbols<cr>', { desc = 'Alias for [S]earch [F]iles' })
+-- OpenInGitHub
+vim.keymap.set('n', '<Leader>gr', ':OpenInGHRepo<cr>', { silent = true, noremap = true, desc = 'Open GitHub Repository' })
+vim.keymap.set('n', '<Leader>gl', ':OpenInGHFileLines<cr>', { silent = true, noremap = true, desc = 'Open current line in GitHub' })
+vim.keymap.set('n', '<Leader>gc', ':OpenInGHFileLines+<cr>', { silent = true, noremap = true, desc = 'Copy GitHub URL in current line' })
 
 -- vim: ts=2 sts=2 sw=2 et
