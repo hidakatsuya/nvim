@@ -11,9 +11,7 @@ return {
   },
   config = function()
     require('neo-tree').setup {
-      window = {
-        position = 'float',
-      },
+      popup_border_style = 'single',
       filesystem = {
         filtered_items = {
           hide_dotfiles = false,
@@ -24,10 +22,5 @@ return {
         },
       },
     }
-
-    vim.cmd [[
-      nnoremap \ :Neotree toggle float reveal_force_cwd<cr>
-      nnoremap gs :Neotree float git_status<cr>
-    ]]
   end,
 }

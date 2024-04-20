@@ -62,4 +62,8 @@ vim.keymap.set('n', '<Leader>gr', ':OpenInGHRepo<cr>', { silent = true, noremap 
 vim.keymap.set('n', '<Leader>gl', ':OpenInGHFileLines<cr>', { silent = true, noremap = true, desc = 'Open current line in GitHub' })
 vim.keymap.set('n', '<Leader>gc', ':OpenInGHFileLines+<cr>', { silent = true, noremap = true, desc = 'Copy GitHub URL in current line' })
 
+-- NeoTree
+vim.keymap.set('n', '<M-S-e>', ':Neotree toggle filesystem position=left reveal_force_cwd<cr>', { desc = 'Show filesystem tree view' })
+vim.keymap.set('n', '<Leader>gs', ':Neotree toggle git_status position=float<cr>', { desc = 'Show git-status tree view' })
+
 -- vim: ts=2 sts=2 sw=2 et
