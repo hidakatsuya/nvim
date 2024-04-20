@@ -48,4 +48,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- LazyGit
+vim.keymap.set('n', '<M-S-g>', ':LazyGit<cr>', { silent = true, desc = 'Show lazygit' })
+
+-- Search files
+vim.keymap.set('n', '<M-p>', ':Telescope find_files<cr>', { desc = 'Alias for [S]earch [F]iles' })
+
+-- Document symbols
+vim.keymap.set('n', '<M-S-o>', ':Telescope lsp_document_symbols<cr>', { desc = 'Alias for [S]earch [F]iles' })
+
 -- vim: ts=2 sts=2 sw=2 et

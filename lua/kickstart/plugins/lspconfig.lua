@@ -172,6 +172,8 @@ return {
             },
           },
         },
+
+        solargraph = { 'ruby' },
       }
 
       -- Ensure the servers and tools above are installed
