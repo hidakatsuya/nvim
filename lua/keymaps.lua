@@ -52,10 +52,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.keymap.set('n', '<M-C-g>', ':LazyGit<cr>', { silent = true, desc = 'Show lazygit' })
 
 -- Search files
-vim.keymap.set('n', '<M-p>', ':Telescope find_files<cr>', { desc = 'Alias for [S]earch [F]iles' })
+vim.keymap.set('n', '<M-p>', ':Telescope find_files<cr>', { silent = true, desc = 'Alias for [S]earch [F]iles' })
 
 -- Search by Grep
-vim.keymap.set('n', '<M-S-f>', ':Telescope live_grep<cr>', { desc = 'Alias for [S]earch by [G]rep' })
+vim.keymap.set('n', '<M-S-f>', ':Telescope live_grep<cr>', { silent = true, desc = 'Alias for [S]earch by [G]rep' })
 
 -- OpenInGitHub
 vim.keymap.set('n', '<Leader>gr', ':OpenInGHRepo<cr>', { silent = true, noremap = true, desc = 'Open GitHub Repository' })
@@ -63,7 +63,10 @@ vim.keymap.set('n', '<Leader>gl', ':OpenInGHFileLines<cr>', { silent = true, nor
 vim.keymap.set('n', '<Leader>gc', ':OpenInGHFileLines+<cr>', { silent = true, noremap = true, desc = 'Copy GitHub URL in current line' })
 
 -- NeoTree
-vim.keymap.set('n', '<M-S-e>', ':Neotree toggle filesystem position=left reveal_force_cwd<cr>', { desc = 'Show filesystem tree view' })
-vim.keymap.set('n', '<Leader>gs', ':Neotree toggle git_status position=float<cr>', { desc = 'Show git-status tree view' })
+vim.keymap.set('n', '<M-S-e>', ':Neotree toggle filesystem position=float reveal_force_cwd<cr>', { silent = true, desc = 'Show filesystem tree view' })
+vim.keymap.set('n', '<Leader>gs', ':Neotree toggle git_status position=float<cr>', { silent = true, desc = 'Show git-status tree view' })
+
+-- Copy relative path
+vim.keymap.set('n', '<Leader>cr', ':let @+ = expand("%")<cr>', { silent = true, desc = 'Copy relative path' })
 
 -- vim: ts=2 sts=2 sw=2 et

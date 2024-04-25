@@ -59,4 +59,11 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Disable line numbers in Terminal
+vim.api.nvim_create_autocmd('TermOpen', {
+  desc = 'Disable line numbers in Terminal',
+  pattern = '*',
+  command = 'setlocal nonumber norelativenumber',
+})
+
 -- vim: ts=2 sts=2 sw=2 et
